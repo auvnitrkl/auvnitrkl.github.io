@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Team Tiburon &mdash; inside team</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <link rel="shortcut icon" href="images/favicon.ico">
+  <link rel="stylesheet" href="css/custom-bs.css">
+  <link rel="stylesheet" href="css/jquery.fancybox.min.css">
+  <link rel="stylesheet" href="fonts/icomoon/style.css">
+  <link rel="stylesheet" href="fonts/line-icons/style.css">
+
+  <!-- MAIN CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <div class="loader">
+    <div class="spinner-border text-primary" role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+  </div>
+
+  <div class="site-wrap">
+    <div class="site-mobile-menu site-navbar-target">
+      <div class="site-mobile-menu-header">
+        <img style="margin-left: 10px;  padding: 5px;" class="img-fluid" height="45" width="45" src="images/logo.png">
+        <div class="site-mobile-menu-close mt-3">
+          <span class="icon-close2 js-menu-toggle"></span>
+        </div>
+      </div>
+      <div class="site-mobile-menu-body"></div>
+    </div> <!-- .site-mobile-menu -->
+
+
+    <!-- NAVBAR -->
+    <header class="site-navbar" id="top">
+      <div class="container-fluid">
+        <div class="dark-div">
+          <button onclick="darkTheme()">DM</button>
+        </div>
+        <div class="mySidenav">
+          <a href="team_mech.html" class="t-mech">Mechanical</a>
+          <button onclick="expand(0)" class="t-mech-btn">+</button>
+          <a href="team_elec.html" class="t-elec">Electronics</a>
+          <button onclick="expand(1)" class="t-elec-btn">+</button>
+          <a href="team_soft.html" class="t-soft">Software</a>
+          <button onclick="expand(2)" class="t-soft-btn">+</button>
+          <a href="team_pr.html" class="t-pr">PR</a>
+          <button onclick="expand(3)" class="t-pr-btn">+</button>
+          <a href="team_acous.html" class="t-acous">Acoustic</a>
+          <button onclick="expand(4)" class="t-acous-btn">+</button>
+
+
+        </div>
+        <div class="row align-items-center">
+          <div class="site-logo col-8"><a href="index.html">
+              TIBURON</a>
+            <a href="index.html"><img style="margin-left: 10px;  padding: 5px;" class="img-fluid" height="45" width="45" src="images/logo.png" alt="site-logo"></a>
+            <iframe src="https://www.facebook.com/plugins/like.php?href=https%3A%2F%2Fwww.facebook.com%2Ftiburonauv%2F&amp;width=72&amp;layout=button_count&amp;action=like&amp;size=small&amp;show_faces=true&amp;share=true&amp;height=21&amp;appId"
+              width="140" height="20" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+          </div>
+          <nav class="mx-auto site-navigation">
+            <ul class="site-menu js-clone-nav d-none d-lg-block">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="team.html">The Team</a></li>
+              <li><a href="achievements.html">Achievements</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="events.html">Technical Events</a></li>
+              <li><a href="sponsors.html">Sponsors</a></li>
+              <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+          </nav>
+          <div class="col-4 site-burger-menu d-block d-lg-none text-right">
+            <a href="#" class="site-menu-toggle js-menu-toggle"><span class="icon-menu h3"></span></a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <section class="site-navbar2" id="top2">
+      <div><img class="img-fluid" height="75" width="75" src="images/logo.png"></div>
+    </section>
+    <!-- HOME -->
+    <section class="home-section section-hero overlay slanted " id="home-section">
+
+      <div class="container">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-8 text-center">
+            <h1><strong>Inside Team</strong></h1>
+            <div class="mx-auto w-75">
+              <h3 style="color: cornsilk">Where hardwork does all magic.</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIDEO -->
+      <div class="video-container">
+        <video autoplay loop="true" controls muted>
+          <source type="video/mp4" src="videos/tiburon.mp4">
+        </video>
+      </div>
+
+      <a href="#about-us-section" class="smoothscroll scroll-button">
+        <span class=" icon-keyboard_arrow_down"></span>
+      </a>
+    </section>
+
+    <!-- ABOUT US -->
+    <section class="site-section about-us-section" id="about-us-section">
+      <div class="container">
+
+        <div class="row mb-5 align-items-center pt-0 site-section">
+          <div class="col-md-6 align-self-center">
+            <h3 class="section-title-sub text-center text-primary">About Us</h3>
+            <h2 class="section-title mb-4 text-center">Building of AUV</h2>
+
+            <p>An AUV is built around 4 subsystems namely: Mechanical, Electronics, Software, and Acoustics. All these subsystems work in unison to optimize the performance of AUV underwater. Before the actual run, the AUV is tested on a Simulator to
+              verify its working.
+            <div>
+              <span id="text"> Without going into the technical jargons, one can easily understand the importance of these subsystems. Mechanical take cares of the structure and overall stability of the bot. Electrical subsystem looks after the
+                circuit design and electronic connections needed. Computer vision works on image processing and analyzing the images. The acoustic subsystem is responsible for localisation and detection of underwater targets emitting acoustic
+                signals. Simulators are leveraged to perform dry runs for the code and identify errors and tweak the bot.<br>Last but not the least, the public relations team. Without proper funding and equipment, preparing a bot can be a real tough
+                task adding on the pressure over the team. Sponsorship procurement and the best publicity practices considering the current trends are the most vital tasks associated with the PR team.</span></div>
+            </p>
+            <div class="btn-container">
+              <button id="toggle" style="border-radius: 5px; border-color: rgba(0, 100, 250, 0.712); background-color: rgba(110, 163, 223, 0.514);">Read More</button>
+            </div>
+          </div>
+          <div class="col-md-5 ml-auto ">
+            <div class="slideshow-container">
+
+              <div class="mySlides ss-fade">
+                <img class="ss-img" src="images/auv3.0.jpg">
+              </div>
+
+              <div class="mySlides ss-fade">
+                <img class="ss-img" src="images/sauvc-2018.jpg">
+              </div>
+
+              <div class="mySlides ss-fade">
+                <img class="ss-img" src="images/working.jpeg">
+              </div>
+              <!--
+              <a class="ss-prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="ss-next" onclick="plusSlides(1)">&#10095;</a>-->
+              <div style="text-align:center">
+                <span class="ss-dot" onclick="currentSlide(1)"></span>
+                <span class="ss-dot" onclick="currentSlide(2)"></span>
+                <span class="ss-dot" onclick="currentSlide(3)"></span>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row mb-5 border-top pt-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Face of the Team</h2>
+          </div>
+        </div>
+
+        <div class="row  block__69944">
+          <div class="col-lg-3 mb-5" style="border-width: 5px; border-color: black;">
+            <img src="images/team/Malkhan.jpg" alt="Image" class="img-fluid mb-2 rounded">
+            <div class="text-center">
+              <h3 id="bot2">Malkhan Singh</h3>
+            </div>
+            <p class="text-center">Former Captain</p>
+
+            <!-- <div class="social text-center mt-4">
+              <a href="#"><span class="icon-facebook"></span></a>
+              <a href="#"><span class="icon-twitter"></span></a>
+              <a href="#"><span class="icon-instagram"></span></a>
+              <a href="#"><span class="icon-linkedin"></span></a>
+            </div> -->
+          </div>
+
+          <div class="col-lg-9">
+            <p class="team_head lead-team-3" id="team_head3">
+              Joining Team Tiburon was on my bucket list since I joined NITR. It has been a wonderful experience for me to be a part of such a great team and also get an opportunity to lead it from the front. The team has had a successful journey and behind this success story, are the team members who work dedicatedly and tirelessly for the team. The team has a loud and clear vision and is stepping to it, constantly with  confidence and motivation.</p>
+            <div style="text-align: right; ">- Malkhan Singh</div>
+          </div>
+
+          <div class="col-lg-3 mb-5" style="border-width: 5px; border-color: black;">
+            <img src="images/team/Aatish.jpg" alt="Image" class="img-fluid mb-2 rounded">
+            <div class="text-center">
+              <h3 id="bot0">Aatish Rana</h3>
+            </div>
+            <p class="text-center">Captain</p>
+
+            <!-- <div class="social text-center mt-4">
+                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="#"><span class="icon-twitter"></span></a>
+                <a href="#"><span class="icon-instagram"></span></a>
+                <a href="#"><span class="icon-linkedin"></span></a>
+              </div> -->
+          </div>
+
+          <div class="col-lg-3">
+            <p class="lead-team" id="team_head1">
+              Tiburon is one of those chapters of my college life which will remain with me till my last breath. It has been a wonderful experience so far. It was amazing to work with all and to learn from them. Now leading the team I hope I will
+              make some significant contribution through the skills and experience I have gained so far. I believe this team has sufficient potential and talent to become one of the best AUV teams in the world and we will together achieve it soon.
+            </p>
+            <div style="text-align: right; ">- Aatish Rana</div>
+          </div>
+
+
+          <div class="col-lg-3 mb-5">
+            <img src="images/team/Angad.jpg" alt="Image" class="img-fluid mb-4 rounded">
+            <div class="text-center">
+              <h3 id="bot1">Angad Pattnaik</h3>
+            </div>
+            <p class="text-center">Vice-Captain</p>
+
+            <!-- <div class="social text-center mt-4">
+                <a href="#"><span class="icon-facebook"></span></a>
+                <a href="#"><span class="icon-twitter"></span></a>
+                <a href="#"><span class="icon-instagram"></span></a>
+                <a href="#"><span class="icon-linkedin"></span></a>
+              </div> -->
+          </div>
+
+          <div class="col-lg-3">
+            <p class="team_head lead-team-2" id="team_head2">
+              Team Tiburon holds a very special place in my college life. From being a noob in robotics to being the Vice-captain, it has been one heck of a special ride for me. Backed by a fantastic network of alumni and diligent members, we take
+              pride in carrying forward the legacy of building robust and capable AUVs. Frankly speaking, this is where the magic happens in NITR.</p>
+            <div style="text-align: right; ">- Angad Pattnaik</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<section class="si-section">
+      <div class="container">
+        <div class="row mb-5 border-top pt-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h2 class="section-title mb-3">Founders</h2>
+          </div>
+        </div>
+
+        <div id="posts" class="row no-gutters mb-5">
+
+          <div class="col-md-12 col-lg-2-1 item">
+            <div class="blur-it">
+              <img class="img-fluid" src="images/Founder/Satish.jpg">
+              <div class="overlay3">
+                <h5 style="color:cornsilk  ;font-size:1rem; text-align: center; margin-top: 10%;"><strong>Satish Rajooru</strong><br></h5>
+                <br><br>
+                <p style="text-align: center; color: blanchedalmond;">
+                </p>
+              </div>
+            </div>
+          </div>'
+
+          <div class="col-md-12 col-lg-2-1 item">
+            <div class="blur-it">
+              <img class="img-fluid" src="images/Founder/Mithun2.jpg">
+              <div class="overlay3">
+                <h5 style="color:cornsilk  ;font-size:1rem; text-align: center; margin-top: 10%;"><strong>Mithun Babu</strong><br></h5>
+                <br><br>
+                <p style="text-align: center; color: blanchedalmond;">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-2-1 item">
+            <div class="blur-it">
+              <img class="img-fluid" src="images/Founder/Dinesh2.jpg">
+              <div class="overlay3">
+                <h5 style="color:cornsilk  ;font-size:1rem; text-align: center; margin-top: 10%;"><strong>Dinesh Sahoo</strong><br></h5>
+                <br><br>
+                <p style="text-align: center; color: blanchedalmond;">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-2-1 item">
+            <div class="blur-it">
+              <img class="img-fluid" src="images/Founder/Kusmi-min.jpg">
+              <div class="overlay3">
+                <h5 style="color:cornsilk  ;font-size:1rem; text-align: center; margin-top: 10%;"><strong>Kusmi Vamsi Krishna</strong><br></h5>
+                <br><br>
+                <p style="text-align: center; color: blanchedalmond;">
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-12 col-lg-2-1 item">
+            <div class="blur-it">
+              <img class="img-fluid" src="images/Founder/Deb2.jpg">
+              <div class="overlay3">
+                <h5 style="color:cornsilk  ;font-size:1rem; text-align: center; margin-top: 10%;"><strong>Deb Pradhan</strong><br></h5>
+                <br><br>
+                <p style="text-align: center; color: blanchedalmond;">
+                </p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="col-12 text-center" data-ao="fade">
+         <h3 class="section-title mb-3 back " style="color: gray">THIS TEAM IS HERE BECAUSE OF YOU GUYS</h3></div>
+      </div>
+    </div>
+    </section>
+    <!--<section>
+      <div class="container">
+        
+  
+            <div class="row mb-5 border-top pt-5">
+              <div class="col-12 text-center" data-aos="fade">
+                <h2 class="section-title mb-3">Founders</h2>
+              </div>
+            </div>
+  
+          <div id="posts" class="row ">
+               <div class="item tiburon1 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                  <div class="item-wrap">
+                    <span >Satish Rajooru</span>
+                    <img class="img-fluid" src="images/Founder/Satish.jpg" width="100%" >
+                  </div>
+              </div>
+              
+              <div class="item tiburon1 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                <div class="item-wrap">
+                  <span >Kusmi Vamsi Krishna</span>
+                  <img class="img-fluid" src="images/Founder/Kusmi-min.jpg" width="100%" >
+                </div>
+              </div>
+  
+              <div class="item tiburon1 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                  <div class="item-wrap">
+                    <span >Mithun Babu</span>
+                    <img class="img-fluid" src="images/Founder/Mithun2.jpg" width="100%" >
+                  </div>
+              </div>
+                
+              <div class="item tiburon1 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                  <div class="item-wrap">
+                    <span >Dinesh Sahoo</span>
+                    <img class="img-fluid" src="images/Founder/Dinesh2.jpg" width="100%" >
+                  </div>
+              </div>
+                
+              <div class="item tiburon1 col-12 col-sm-6 col-md-6 col-lg-3 col-xl-3 mb-3">
+                    <div class="item-wrap">
+                      <span >Deb Pradhan</span>
+                      <img class="img-fluid" src="images/Founder/Deb2.jpg" width="100%" >
+                    </div>
+              </div>
+            </div>
+          </div>
+      </section>-->
+
+
+    <!-- SERVICES -->
+
+    <section class="site-section services-section block__62849" style="margin-top: 20px;" id="next-section2">
+      <div class="container">
+        <div class="row mb-5  pt-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h3 class="section-title-sub text-primary">Our Team</h3>
+            <h2 class="section-title mb-3">Assemble Sub-systems!!</h2>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+            <a href="team_mech.html" class="block_team block__16443 text-center d-block">
+              <span class="custom-icon mx-auto"><span class="icon-line-tools-2 d-block"></span></span>
+              <h3>Mechanical Team</h3>
+              <p><br>We design and build everything you see.</p>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+            <a href="team_elec.html" class="block_team block__16443 text-center d-block">
+              <span class="custom-icon mx-auto"><span class="icon-line-genius d-block"></span></span>
+              <h3>Electronics Team</h3>
+              <p>We connect everything together just like a team .</p>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+            <a href="team_soft.html" class="block_team block__16443 text-center d-block">
+              <span class="custom-icon mx-auto"><span class="icon-line-desktop d-block"></span></span>
+              <h3>Software Team</h3>
+              <p>We know the right keystrokes to turn things on .</p>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+            <a href="team_acous.html" class="block_team block__16443 text-center d-block">
+              <span class="custom-icon mx-auto"><span class="icon-line-rss d-block"></span></span>
+              <h3>Acoustic Team</h3>
+              <p>We hear everything and sense the right frequencies .</p>
+            </a>
+          </div>
+
+          <div class="col-12 col-md-6 col-lg-4 mb-4 mb-lg-5">
+            <a href="team_pr.html" class="block_team block__16443 text-center d-block">
+              <span class="custom-icon mx-auto"><span class="icon-line-compass d-block"></span></span>
+              <h3>PR Team</h3>
+              <p><br>We outreach to build relations .</p>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <section class="site-section">
+      <div class="container">
+        <div class="row mb-5">
+          <div class="col-12 text-center" data-aos="fade">
+            <h3 class="section-title-sub text-primary">Inspiring Quotes</h3>
+            <h2 class="section-title mb-3">What keeps us going ?</h2>
+          </div>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-6">
+            <div class="block_quote block__87154">
+              <span class="quote"><img src="images/quote.png" alt="Image"></span>
+              <blockquote>
+                <p> "Talent wins games, but teamwork and intelligence win championships."<br>
+                <h3 style="font-size: 1.2rem;">–Michael Jordan.</h3>
+              </blockquote>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <div class="block_quote block__87154">
+              <span class="quote"><img src="images/quote.png" alt="Image"></span>
+              <blockquote>
+                <p>"Alone we can do so little; together we can do so much."<br><br>
+                <h3 style="font-size: 1.2rem;"> – Helen Keller </p>
+              </blockquote>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </section>
+
+
+    <footer class="site-footer slanted-footer">
+      <a href="team.html#home-section" class="smoothscroll scroll-top">
+        <span class="icon-keyboard_arrow_up"></span>
+      </a>
+
+      <div class="container">
+        <div class="row mb-5">
+
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Technical Events</h3>
+            <ul class="list-unstyled">
+              <li><a href="https://sauvc.org/">Singapore AUV Challenge(SAUVC)</a></li>
+              <li><a href="https://www.niot.res.in/SAVe/">Student Autonomous Underwater Vehicle(SAVe) Competition</a></li>
+              <li><a href="https://robosub.org/">RoboSub 2019</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Address</h3>
+            <ul class="list-unstyled">
+              <li>Technology Innovation and Industry Relations Building, NIT Rourkela</li>
+              <li><a href="mailto:tiburonnitr.contact@gmail.com">tiburonnitr.contact@gmail.com</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Faculty Advisor</h3>
+            <ul class="list-unstyled">
+              <li>Dr Haraprasad Roy</li>
+              <li><a href="mailto:royh@nitrkl.ac.in">royh@nitrkl.ac.in</a></li>
+            </ul>
+          </div>
+
+          <div class="col-6 col-md-3 mb-4 mb-md-0">
+            <h3>Contact Us</h3>
+            <div class="footer-social">
+              <a href="https://www.facebook.com/tiburonauv/"><span class="icon-facebook"></span></a>
+              <a href="https://www.twitter.com/auvnitrkl"><span class="icon-twitter"></span></a>
+              <a href="https://www.instagram.com/auvnitrkl"><span class="icon-instagram"></span></a>
+              <a href="https://www.linkedin.com/school/tiburonauv"><span class="icon-linkedin"></span></a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="row text-center">
+          <div class="col-12">
+            <p class="copyright"><small class="block">
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;<script>
+                  document.write(new Date().getFullYear());
+                </script> All rights reserved | Developed from
+                <a href="https://colorlib.com" target="_blank">Colorlib</a></a>
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </small></p>
+          </div>
+        </div>
+
+      </div>
+    </footer>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/isotope.pkgd.min.js"></script>
+  <script src="js/stickyfill.min.js"></script>
+  <script src="js/jquery.fancybox.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/readmore.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/slide-show.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/sideNavExpand.js"></script>
+  <script src="js/dark.js"></script>
+</body>
+
+</html>

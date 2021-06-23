@@ -123,17 +123,50 @@
                     Together with new machine learning approaches, traditional image processing techniques, color correction algorithms, and other fine-tuned approaches, we hope to strengthen the perception system of Makara 4.0
                 </li>
             </ol>
+            <div>
+              <div class="row align-items-center">
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s1.png?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s2.png?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s3.png?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    </div>
             <h3>Better Perception Techniques:</h3>
             <ol>
                 <li><b>Glare Removal</b>Sometimes the images obtained from the bottom camera are too bright and keep fluctuating due to sunlight reflection(happens when the arena isn't that deep and has a shiny bottom surface). To remove glares from these images we have used an algorithm to make them more visible and clear.
                     The algorithm keeps track of the most recent 'n' images and finds the median, mean variation of 'n' RGB values respectively for each pixel in the image. The final image obtained has less glare and the lighting is spread equally. As the glares are rapidly moving due to surface water motion, taking its median helps to distribute its intensity and makes the image more clear and visible.
+              <div>  <div class="row align-items-center">
+    <div class="col-4">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    <div class="col-4">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+  </div>
+</div>
                 </li>
 
                 <li><b>Color Correction</b>The Robosub arena watercolor is greenish and unclear and thus making things difficult for the object detection model as they are trained on a different environment.
                     To change the color and make it more natural blue, we have simply changed the weight of the RGB channel of the image (called Stretching) and obviously, the weight of the green channel needs to be reduced. Then to remove the fogginess in the image we used the Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm that helped to increase the image contrast and made images more clear.
+                   <div>
+              <div class="row align-items-center">
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s6.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s7.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s8.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    </div>
+    </div>
                 </li>
             </ol>
-
+            
             
 
             <h3>Model Optimisation:</h3>
@@ -145,15 +178,27 @@
 
             <h3>PID Auto-tuning:</h3>
             <p>The PID controllers used in our AUV have to tune it (that means to obtain the value of Kp, Ki, Kd constants ) manually so that it manoeuvres properly.
-                But this time we tried to automate things and decided to build a tuning algorithm using Ant Colony Optimization (ACO). To tune the constants of each degree of freedom, the algorithm first generates some random values and tries to minimize the error generated from a cost function for each generated value and then determine the best values obtained from this generation and use them as the parents for the next generation. This happens generation over generation till we get an optimal value and every generation is more optimal than its previous one.</p>
+                But this time we tried to automate things and decided to build a tuning algorithm using Ant Colony Optimization (ACO). To tune the constants of each degree of freedom, the algorithm first generates some random values and tries to minimize the error generated from a cost function for each generated value and then determine the best values obtained from this generation and use them as the parents for the next generation. This happens generation over generation till we get an optimal value and every generation is more optimal than its previous one.
+<div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s9.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
+                </p>
 
             <h3>Working with DVL and why ?</h3>
             <p>
                 A Doppler Velocity Log (DVL) is an acoustic sensor that estimates velocity relative to the sea bottom. This is achieved by sending a long pulse along with a minimum of three acoustic beams, each pointing in a different direction. Typically, this produces estimates of velocity converted into an XYZ coordinate frame of reference – the DVL’s frame of reference. Together with a heading estimate, these velocity estimates may be integrated over the ping interval to estimate a step-by-step change of position – i.e. displacement = velocity × time step.
                 <br>
+                <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s10.png?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
                 It is important to ensure that velocity estimates do not have any bias or offsets because this will lead to a growing error in the position estimate. This is where the Doppler Velocity Log becomes a key in the subsea navigation for its accurate estimate of velocity with zero-mean bias. This sensor combined with the IMU ensures a proper estimation of obstacles/key places that the vehicle needs to avoid/reach to perform some specific work.
                 <br>
+                <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s11.png?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
             </p>
+           
+  </div>
         </div>
 <!--        electronics--------------------------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
 

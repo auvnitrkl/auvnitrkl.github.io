@@ -219,7 +219,7 @@
 </p>
             <h3>POWER MANAGEMENT BOARD:</h3>
              <div class="text-center">
-  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf66e8a5c9df6d23fc?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<!--   <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf66e8a5c9df6d23fc?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe> -->
 </div>
 <p>As already discussed due to galvanic isolation, we powered the Thrusters with one battery and rest with the another. The Thruster battery discharged fast, decreasing runtime and efficiency. So, this year a smart battery management system was incorporated which used 2 16000 mAh LIPO battery packs but one battery at a time.After a battery discharges to a minimum preset level we switch batteries with help of a hot swap controller and a STM32f103c8t6. This board is also responsible for generation of different voltage levels,i.e. 12V,5V and 3.3V to meet the requirements of different components across our circuit.</p>
             <h3>BACKPLANE/MAIN BOARD:</h3>
@@ -231,7 +231,7 @@
 </p>
 <h3>ACTUATOR BOARD:
  <div class="text-center">
-  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcff1b8e29dec3a8e09?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<!--   <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcff1b8e29dec3a8e09?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe> -->
 </div>
 
 </h3>
@@ -239,7 +239,7 @@
 </p>
 <h3>DEBUGGING BOARD:</h3>
  <div class="text-center">
-  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf977a80b01f1b5cb6?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<!--   <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf977a80b01f1b5cb6?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe> -->
 </div>
 <p>In our previous circuit, we used LEDs to debug circuits which made troubleshooting difficult and time consuming. So, in the new circuit we introduced an independent debug/protection board with an onboard OLED screen powered with an independent power supply. This board contains a STM32f103c8t6 microcontroller which monitors voltage, current and temperature at all important nodes using LTC2990. The data acquired is stored in an EEPROM which can be used for later debugging. Our circuits have also been incorporated with TPS2660x efuses to ensure circuit protection. These efuses can also be controlled by the debugging board in case of any emergency.
 </p>
@@ -250,27 +250,100 @@
 </p>
 <h3>OLD CIRCUIT:</h3>
 <div class="text-center">
-            <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1c501fcd4f7e618b?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+<!--             <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1c501fcd4f7e618b?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe> -->
         </div>
         </div>
 <!--  mechanical---------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-         <h2>Mechanical Subsystem</h2>
+         <h1>Mechanical Subsystem</h1>
         <div>
-            <h3>Visual Object Detection:</h3> 
-            <b>Computer Vision(CV)</b> <br>
-            <ol>
-                <li><b>OpenCV:</b> We as a team have been using OpenCV to perform image processing techniques to extract information from camera frames and detect obstacles & tasks at hand in many of our previous competitions. We used bounding box vertices to locate tasks such as gates & bins. These detections also helped in localizing our bot as by applying basic math similarity concept we were able to estimate the position of our bot with respect to task (having the focal length of the camera at hand and the original length and width of task objects and it comparing with the ratio of pixel lengths of edges). The center we calculated from the contours/hough lines made around the task(gates) helped in aligning the bot and pass through the gate.
-                    Neural Network</li>
-                <li><b>YOLOv3/v5:</b> Although traditional image processing methods were successful in detecting objects underwater(with suitable adjustment in HSV values as per lighting) but it comes with certain drawbacks such as failing to detect from a greater distance and unreliable results in different lighting and background. Here we have found Yolov3(You Only Look Once) CNN ( a real-time object detection algorithm that identifies specific objects in videos, live feeds, or images.)to be effective. We realized if we can navigate to the object close enough using this neural network-based model, then we can apply suitable thresholding techniques or can use the same model to get the center and pass through the target(gate) or reach the task at hand. For training the CNN, images were collected from previous competitions. Data augmentation was also performed to introduce variation and increase the dataset. We used our own Labeler Toolbox to label the images. 1/5th of the images were reserved as the test set to run the inference and the model(based on open-source neural network framework Darknet) was trained on the rest of the data. Unfortunately, we could not test the model real-time underwater on Nvidia Jetson due to the pandemic, but we still achieved very encouraging results testing it on our local systems(25 fps 87%).
-                    Together with new machine learning approaches, traditional image processing techniques, color correction algorithms, and other fine-tuned approaches, we hope to strengthen the perception system of Makara 4.0
-                </li>
-            </ol>
+            <h3>Basic vehicle frame design and material selection criteria :</h3> 
             
+            <p>The frame is designed to be compact and modular to reduce drag force down to a minimum and provide efficient hydrodynamics. The frame design borrows some inspiration from Tesla's Cybertruck model. Aluminium is used as the material of the frame due to its lightweight and easy machining ability. The frame is trapezoidal (from the side view). The design of the frame is such that each elementary structure (hollow box and aluminium rods) can be separated from each other. It allows us a never before level of flexibility in adjusting dimensions depending upon the requirements.</p>
+            <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m1.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
+ <h3>Hull Design:</h3> 
+            
+            <p> The hull design is aimed to provide high strength and rigidity while keeping the weight to a minimum, so we went for an S Glass box-shaped enclosure. 
+The hull is divided into two layers – one for electronics and circuitry and the other for battery enclosure. The material of the hull is chosen in such a way that it does not crack at a depth of about 10m. This is thoroughly tested by simulation in ANSYS Static Structural by applying hydrostatic pressure equivalent to a depth of 10m underwater.
+</p>Both its ends can be easily opened to access the electronics inside. The design also provides watertight sealing to the bot. In case of an accidental failure, the electronic components are placed on a perforated and tapered base plate. This ensures the safety of the circuit in case of leakage as the water first collects at the bottom of the base plate.
+</p>
+            <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m2.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
+ <h3>Camera Hull Design :</h3> 
+            
+            <p>The camera hull is made of acrylic. So similar simulations were performed on the camera hull in ANSYS as done in the main hull to ensure structural integrity.
+            </p>
+             <h3>Object Dropper and Grabber :</h3> 
+            
+            <p>A very simple mechanism has been employed to drop the required objects from the vehicle. In our mechanism, a BO motor is mounted to a PVC pipe. When the motor rotates, the obstruction causing the object to stay is removed, and hence the object falls. Newton Subsea Gripper, developed by BlueRobotics, is used.
+
+            </p>
+             <h3>Torpedo :</h3> 
+            
+            <p>The torpedoes are in the shape of a hollow cylinder of 10mm diameter and are 3D printed for high accuracy. A pressure-based system is used to launch the torpedoes by a tank with pre-filled pressure of 30Pa. The torpedo is connected to the tank through PU fitting pipe passing through a coil actuating solenoid, which on receiving the command opens for about 10 milliseconds, thus allowing the air to pass from the tank to the torpedo through the PU fitting pipe.
+            </p>
+             <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m3.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
+             <h3>Cooling System :</h3> 
+            
+            <p>The thermal system consists of a quasi active cooling system. 
+It helps us provide better cooling without having a heavy toll on our batteries. The primary method of heat transfer is conduction. There are other minor sources of heat, which are cooled by convection due to the circulating air.
+
+            </p>
+            <p>The cooling system primarily consists of heat pipes paired with internal cooling mechanisms present in some of the components. The heat pipes help in easy and continuous flow of heat out from the hull via the heat sinks present in the ICs and Jetson.
+            </p>
+            <p>Jetson has an inbuilt cooling fan which benefits a lot from this cooling system by providing it with a viable heat sink in the otherwise closed environment. 
+            </p>
+            <p>In the earlier models, we did not emphasise a dedicated cooling system as heat released by electronic components of our previous renditions was manageable. In our new vehicle, we have used better and more powerful ICs and a Jetson, which are primary heat sources. Each is connected to heat sinks and further connected to heat pipes. Furthermore, the heat pipes are in contact with the water outside directly for further heat transfer. There is a cooling fan within Jetson that helps us circulate the air in the hull, which is in contact with heat sinks, and heat pipes help in faster cooling and allow circulation of cool air.
+
+            </p>
+             <h3>EXPERIMENTAL RESULTS :</h3> 
+            
+            <p>Analysis of the battery hull and main hull using ANSYS Static structural was done considering pressures at a depth of 10m for all possible materials taken into consideration initially.Then appropriate materials were chosen thereby giving results of factor of safety of given structures well above 3( S-Glass was chosen for main hull and battery hull) . Thermal analysis of heat pipes used in the  cooling mechanism was done using ANSYS - Steady state Thermal. The cooling system proved efficient to dissipate the heat generated by the electronic components.
+            </p>
+            <div class="row align-items-center">
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    <p>Equivalent stress analysis of Battery hull</p>
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+        <p>Factor of safety results for battery hull</p>
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m6.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+
+    <p>Factor of safety results for analysis of Main Hull</p>
+    </div>
+    </div>
+    <div class="row align-items-center">
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m7.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+    <p>Equivalent Stress results for analysis of Main Hull</p>
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m8.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+     <p>Temperature Gradient results for Heat pipe cooling ICs</p>
+    </div>
+    <div class="col">
+      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m9.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+     <p>Temperature gradient results for heat pipe cooling JETSON</p>
+    </div>
+    </div>
+             <h3>REFERENCES :</h3> 
+            
+            <ol>
+            <li><a href="https://www.intechopen.com/books/electronics-cooling/heat-pipes-for-computer-cooling-applications">heat-pipes-for-computer-cooling-applications</a></li>
+            <li><a href="https://celsiainc.com/heat-sink-blog/heat-pipe-thermal-conductivity">heat-pipe-thermal-conductivity</a></li>
+            <li><a href="https://www.boydcorp.com/resources/temperature-control/frequently-asked-thermal-questions.html">frequently-asked-thermal-questions</a></li>
+            </ol>
+
+
+
         </div>
-
-
-
-
     </section>
  
 

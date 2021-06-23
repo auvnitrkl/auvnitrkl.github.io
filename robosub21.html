@@ -14,6 +14,7 @@
 
   <!-- MAIN CSS -->
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/robosub.css">
   <!-- FONTAWESOME -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.2.0/css/all.min.css">
   
@@ -50,7 +51,7 @@
           <button onclick="expand(1)" class="t-elec-btn">+</button>
           <a href="#electronics" class="t-soft">Electronics</a>
           <button onclick="expand(2)" class="t-soft-btn">+</button>
-          <a href="mechanical" class="t-pr">Mechanical</a>
+          <a href="#mechanical" class="t-pr">Mechanical</a>
           <button onclick="expand(3)" class="t-pr-btn">+</button>
 
 
@@ -113,7 +114,20 @@
     <!-- ABOUT US -->
 
     <section class="site-section about-us-section container">
-        <div class="row m-3 bg-success">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12">
+          <div class="d-flex flex-row justify-content-center robosub-title align-items-center">
+            ROBOSUB 2021
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12">
+          <div id="quick-access" class="d-flex flex-column justify-content-center align-item-center">
+            <div class="robo-opt m-auto">QUICK ACCESS</div>
+            <button><a href="./tdr/SoftwareTDR.pdf" target="_blank">View TDR</a></button>
+          </div>
+        </div>
+      </div>
+        <!-- <div class="row m-3 bg-success">
             <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
                 <h1>ROBOSUB 2021</h1>
             </div>
@@ -122,16 +136,18 @@
                 <button class="btn-dark m-1 w-25"><a class="text-light" href="./tdr/TiburonTDR.pdf">Electronics TDR</a></button>
                 <button class="btn-dark m-1 w-25"><a class="text-light" href="./tdr/MechTDR.pdf">Mechanical TDR</a></button>
             </div>
-        </div>
-        <div class="row m-3 bg-warning">
-        <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
-                 <button class="btn-dark m-1 w-25"><a class="text-light" href="#software">Timeline</a></button>
+        </div> -->
+        <!-- <div class="row m-3 bg-warning">
+          <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
+                <button class="btn-dark m-1 w-25"><a class="text-light" href="#software">Timeline</a></button>
                 <button class="btn-dark m-1 w-25"><a class="text-light" href="#software">Software TDR</a></button>
                 <button class="btn-dark m-1 w-25"><a class="text-light" href="#electronics">Electronics TDR</a></button>
                 <button class="btn-dark m-1 w-25"><a class="text-light" href="#mechanical">Mechanical TDR</a></button>
             </div>
-            </div>
-         <h1 id="timeline">Bot Timeline</h1>
+          </div> -->
+          <div id="timeline" class="robosub-br">
+            <h1 class="super-heading">Bot Timeline</h1>
+          </div>
          <div>
             <h3>Tiburon 1.0</h3>
              <div class="text-center">
@@ -155,7 +171,10 @@
             </div>
          </div>
 <!--  software----------------------------------------------------------------/////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-        <h1 id ="software">Software Subsystem</h1>
+        <div id="software" class="robosub-br">
+          <h1 class="super-heading">Software Subsystem</h1>
+        </div>
+
         <div>
             <h3>Visual Object Detection:</h3> 
             <b>Computer Vision(CV)</b> <br>
@@ -167,7 +186,7 @@
                 </li>
             </ol>
             <div>
-              <div class="row align-items-center">
+              <div class="row align-items-center justify-content-center m-3">
     <div class="col">
       <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s1.png?raw=true" alt="Image" class="img-fluid img-shadow">
     </div>
@@ -182,21 +201,22 @@
             <ol>
                 <li><b>Glare Removal</b>Sometimes the images obtained from the bottom camera are too bright and keep fluctuating due to sunlight reflection(happens when the arena isn't that deep and has a shiny bottom surface). To remove glares from these images we have used an algorithm to make them more visible and clear.
                     The algorithm keeps track of the most recent 'n' images and finds the median, mean variation of 'n' RGB values respectively for each pixel in the image. The final image obtained has less glare and the lighting is spread equally. As the glares are rapidly moving due to surface water motion, taking its median helps to distribute its intensity and makes the image more clear and visible.
-              <div>  <div class="row align-items-center">
-    <div class="col-4">
-      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-    </div>
-    <div class="col-4">
-      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-    </div>
-  </div>
-</div>
+            <div>
+              <div class="row d-flex justify-content-center align-items-center m-3">
+                <div class="col-4">
+                  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+                </div>
+                <div class="col-4">
+                  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+                </div>
+              </div>
+            </div>
                 </li>
 
                 <li><b>Color Correction</b>The Robosub arena watercolor is greenish and unclear and thus making things difficult for the object detection model as they are trained on a different environment.
                     To change the color and make it more natural blue, we have simply changed the weight of the RGB channel of the image (called Stretching) and obviously, the weight of the green channel needs to be reduced. Then to remove the fogginess in the image we used the Contrast Limited Adaptive Histogram Equalization (CLAHE) algorithm that helped to increase the image contrast and made images more clear.
                    <div>
-              <div class="row align-items-center">
+              <div class="row justify-content-center align-items-center m-3">
     <div class="col">
       <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s6.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
     </div>
@@ -244,8 +264,10 @@
   </div>
         </div>
 <!--        electronics--------------------------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////  -->
-
-         <h1 id="electronics">Electronics Subsystem</h1>
+      <div id="electronics" class="robosub-br">
+        <h1 class="super-heading">Electronics Subsystem</h1>
+      </div>
+         <!-- <h1 id="electronics">Electronics Subsystem</h1> -->
         <div>
          <div class="text-center">
   <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/elec/e1.png?raw=true" class="img-fluid img-shadow" alt="...">
@@ -297,7 +319,10 @@
         </div>
         </div>
 <!--  mechanical---------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
-         <h1 id="mechanical">Mechanical Subsystem</h1>
+      <div id="mechanical" class="robosub-br">
+        <h1 class="super-heading">Mechanical Subsystem</h1>
+      </div>         
+<!-- <h1 id="mechanical">Mechanical Subsystem</h1> -->
         <div>
             <h3>Basic vehicle frame design and material selection criteria :</h3> 
             
@@ -461,6 +486,7 @@ It helps us provide better cooling without having a heavy toll on our batteries.
   <script src="js/slide-show.js"></script>
   <script src="js/custom.js"></script>
   <script src="js/dark.js"></script>
+  <script src="js/sideNavExpand.js"></script>
 </body>
 
 </html>

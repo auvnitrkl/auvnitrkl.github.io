@@ -1,0 +1,62 @@
+.super-heading{
+    background-color: rgb(59, 143, 238);
+    width: fit-content;
+    padding: 10px 10px;
+    margin: 0px auto ;
+    font-style: bolder;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    color: white;
+    border-radius: 10px;
+}
+.robosub-br{
+    margin: 60px auto;
+    width: 100%;
+    background-color: rgb(161, 161, 216);
+    height: 2px;
+    display: flex;
+    align-items: center;
+}
+
+.robosub-title{
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.685);
+}
+
+#quick-access{
+    display: flex;
+    justify-content: center;
+    margin: 0px auto;
+    width: 50%;
+    justify-content: center;
+    /* border: 2px solid black; */
+}
+#quick-access > div {
+    font-size: 1.5rem;
+    color: white;
+    letter-spacing: 1.4px;
+    background-color: rgba(0, 0, 0, 0.411) ;
+    padding: 5px 10px;
+    border-radius: 10px;
+}
+#quick-access > button {
+    width: 50%;
+    margin: 4px auto;
+    background-color: rgb(206, 182, 182);
+    border: none;
+    border-radius: 10px;
+    border: 2px solid black;
+    box-shadow: 10px 10px 10x 10px black;
+}
+
+#quick-access > button:focus{
+    outline: none;
+    background-color: chartreuse;
+}
+
+#quick-access > button > a{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: rgb(18, 11, 51);
+    text-decoration: none;
+}

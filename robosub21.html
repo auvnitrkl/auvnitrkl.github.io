@@ -204,6 +204,9 @@
 
          <h1>Electronics Subsystem</h1>
         <div>
+         <div class="text-center">
+  <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/elec/e1.png?raw=true" class="img-fluid img-shadow" alt="...">
+</div>
             <h3>OVERVIEW:</h3> 
             <p>Though the previous version of our electronics stack met all the requirements perfectly, but, it also has its issues that we have addressed in this year’s rebuild. </p>
             <p>One major issue was power management, previously we used to power the thrusters using one battery and rest of the circuit using another. This caused the thruster power to run out quickly than the other which reduced our bots runtime and efficiency, so this year we switched to a single power source. We now use a single battery at a time and after it runs out we switch to another using hot swap controllers.This results in increased runtime and better power management.
@@ -215,6 +218,9 @@
 <p>Following the debugging line of thought, in our previous stack making any kind of repair was also difficult, so this time we have decided to replace a single PCB with various modularized PCBs making it easy to just replace the problematic board with a replacement much like any other commercial electronics gadget. Also, this allows our debugging board to execute the local shutdown of unimportant components in case of an error in the board. 
 </p>
             <h3>POWER MANAGEMENT BOARD:</h3>
+             <div class="text-center">
+  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf66e8a5c9df6d23fc?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+</div>
 <p>As already discussed due to galvanic isolation, we powered the Thrusters with one battery and rest with the another. The Thruster battery discharged fast, decreasing runtime and efficiency. So, this year a smart battery management system was incorporated which used 2 16000 mAh LIPO battery packs but one battery at a time.After a battery discharges to a minimum preset level we switch batteries with help of a hot swap controller and a STM32f103c8t6. This board is also responsible for generation of different voltage levels,i.e. 12V,5V and 3.3V to meet the requirements of different components across our circuit.</p>
             <h3>BACKPLANE/MAIN BOARD:</h3>
 
@@ -224,10 +230,17 @@
 <p>Furthermore, to provide an accurate way of measuring depth, a pressure-based depth sensor was also added to our AUV which communicates with STM32 microcontroller through I2C.
 </p>
 <h3>ACTUATOR BOARD:
+ <div class="text-center">
+  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcff1b8e29dec3a8e09?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+</div>
+
 </h3>
 <p>The AUV has a support for 10 thrusters and also we have incorporated MOSFETs to drive solenoid valves for torpedoes. We use a mix of T200 and T100 thrusters, controlled using BlueESC. We are also planning to introduce current sensors to measure the current going to individual thrusters thus helping us to get an approximate idea for speed of thrusters as we can’t have an encoder on the thrusters. 
 </p>
 <h3>DEBUGGING BOARD:</h3>
+ <div class="text-center">
+  <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf977a80b01f1b5cb6?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+</div>
 <p>In our previous circuit, we used LEDs to debug circuits which made troubleshooting difficult and time consuming. So, in the new circuit we introduced an independent debug/protection board with an onboard OLED screen powered with an independent power supply. This board contains a STM32f103c8t6 microcontroller which monitors voltage, current and temperature at all important nodes using LTC2990. The data acquired is stored in an EEPROM which can be used for later debugging. Our circuits have also been incorporated with TPS2660x efuses to ensure circuit protection. These efuses can also be controlled by the debugging board in case of any emergency.
 </p>
 <h3>ACOUSTIC BOARD:</h3>
@@ -235,8 +248,10 @@
 </p>
 <p>There is an onboard AVR microcontroller ATMEGA328p that controls the Frontend gain and filtering also controls various power rails within the board. This board has its own local power distribution to meet the special requirements of the board. The microcontroller also interfaces with the debugging board via CAN and can regulate high-performance and power-saving modes. And power down partially or fully in case of fault when signaled from debugging board.
 </p>
-
-            
+<h3>OLD CIRCUIT:</h3>
+<div class="text-center">
+            <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf1c501fcd4f7e618b?mode=embed" width="640" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
+        </div>
         </div>
 <!--  mechanical---------------------------------------////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
          <h2>Mechanical Subsystem</h2>

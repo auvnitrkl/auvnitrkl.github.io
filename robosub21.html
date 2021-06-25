@@ -91,13 +91,13 @@
       <div class="container">
         <div class="row align-items-center justify-content-center">
           <div class="col-md-8 text-center">
-            <h1><strong>Team Tiburon</strong></h1>
+            <h1><strong>ROBOSUB 2021</strong></h1>
             <h2 style="color:cornsilk;">The AUV Team Of NIT Rourkela</h2>
             <div class="mx-auto w-75">
               <!--need to change this line -->
               <h3 style=" color:rgb(191, 191, 191)">Group of committed engineers working to design the best tech to understand the marine ways.</h3>
             </div>
-            <p class="mt-5"><a href="#inductions" class="btn btn-outline-white btn-md ">INDUCTION PROCESS</a></p>
+            <!-- <p class="mt-5"><a href="#inductions" class="btn btn-outline-white btn-md ">INDUCTION PROCESS</a></p> -->
           </div>
         </div>
       </div>
@@ -127,49 +127,32 @@
           </div>
         </div>
       </div>
-        <!-- <div class="row m-3 bg-success">
-            <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
-                <h1>ROBOSUB 2021</h1>
-            </div>
-            <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="./tdr/SoftwareTDR.pdf">Software TDR</a></button>
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="./tdr/TiburonTDR.pdf">Electronics TDR</a></button>
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="./tdr/MechTDR.pdf">Mechanical TDR</a></button>
-            </div>
-        </div> -->
-        <!-- <div class="row m-3 bg-warning">
-          <div class="col-lg-6 col-sm-12 d-flex justify-content-center">
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="#software">Timeline</a></button>
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="#software">Software TDR</a></button>
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="#electronics">Electronics TDR</a></button>
-                <button class="btn-dark m-1 w-25"><a class="text-light" href="#mechanical">Mechanical TDR</a></button>
-            </div>
-          </div> -->
+        
           <div id="timeline" class="robosub-br">
             <h1 class="super-heading ">Bot Timeline</h1>
           </div>
          <div class="m-2">
-           <h3>uncomment this part at end</h3>
-            <!-- <h3>Tiburon 1.0</h3>
+           <!-- <h3>uncomment this part at end</h3> -->
+            <h3><span class="badge badge-primary">Tiburon 1.0</span></h3>
              <div class="text-center">
               <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf725b84c970776222?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             <p> paragraph here</p>
             </div>
-             <h3>Tiburon 2.0</h3>
+            <h3><span class="badge badge-primary">Tiburon 2.0</span></h3>
              <div class="text-center">
              <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcfb70866660b9cbe3c?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
              <p> paragraph here</p>
             </div>
-             <h3>Tiburon 3.0</h3>
+            <h3><span class="badge badge-primary">Tiburon 3.0</span></h3>
              <div class="text-center">
             <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcfba808c5f07d53e0a?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             <p> paragraph here</p>
             </div>
-             <h3>Tiburon 4.0</h3>
+            <h3><span class="badge badge-primary">Tiburon 4.0</span></h3>
              <div class="text-center">
             <iframe src="https://gmail912066.autodesk360.com/shares/public/SH919a0QTf3c32634dcf257c8f3ca18b689a?mode=embed" width="80%" height="480" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"  frameborder="0"></iframe>
             <p> paragraph here</p>
-            </div> -->
+            </div>
          </div>
 
 <!--  software----------------------------------------------------------------/////////////////////////////////////////////////////////////////////////////////////////////////////////////-->
@@ -406,8 +389,8 @@
             Another major issue was the lack of any “Debugging data” making any sort of debugging a major pain in the buttocks, so we have introduced an independently powered (2x18650 cells) custom made debugging board, which allow us to keep track of Voltages of various nodes of the circuit along with current going to each thruster and temperatures of ESCs. This data will be sent to the main CPU using CAN protocol (which will also be the standard protocol all over the stack) then the CPU can use this data in intelligent decision making like shutting down parts of the stack in case of local errors and saving the rest of the circuit and AUV. the board will also have an EEPROM to store all this data for later use in analytics. </p>
             Following the debugging line of thought, in our previous stack making any kind of repair was also difficult, so this time we have decided to replace a single PCB with various modularized PCBs making it easy to just replace the problematic board with a replacement much like any other commercial electronics gadget. Also, this allows our debugging board to execute the local shutdown of unimportant components in case of an error in the 
             board. 
-            <br>
-            <b>shorten this para</b>
+            <!-- <br>
+            <b>shorten this para</b> -->
           </div>
         </div>
         <div class="col-lg-6 col-sm-12 p-2">
@@ -481,96 +464,159 @@
         <h1 class="super-heading">Mechanical Subsystem</h1>
       </div>         
 
+      <div class="robo-text-title d-flex flex-row text-wrap m-1">
+        Vehicle Design
+      </div>
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="robo-text-subtitle m-1">
+            Design and Material Selection
+          </div>
+          <div class="robo-text-content">
+            The frame is designed to be compact and modular to reduce drag force down to a minimum and provide efficient hydrodynamics. The frame design borrows some inspiration from Tesla's Cybertruck model. Aluminium is used as the material of the frame due to its lightweight and easy machining ability. The frame is trapezoidal (from the side view). The design of the frame is such that each elementary structure (hollow box and aluminium rods) can be separated from each other. It allows us a never before level of flexibility in adjusting dimensions depending upon the 
+            requirements.
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="col-lg-12col-sm-12 p-2">
+            <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m1.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="robo-text-subtitle m-1">
+            Hull Design
+          </div>
+          <div class="robo-text-content">
+            The hull design is aimed to provide high strength and rigidity while keeping the weight to a minimum, so we went for an S Glass box-shaped enclosure. 
+            The hull is divided into two layers – one for electronics and circuitry and the other for battery enclosure. The material of the hull is chosen in such a way that it does not crack at a depth of about 10m. This is thoroughly tested by simulation in ANSYS Static Structural by applying hydrostatic pressure equivalent to a depth of 10m underwater.
+            Both its ends can be easily opened to access the electronics inside. The design also provides watertight sealing to the bot. In case of an accidental failure, the electronic components are placed on a perforated and tapered base plate. This ensures the safety of the circuit in case of leakage as the water first collects at the bottom of the base 
+            plate.
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="col-lg-12col-sm-12 p-2">
+            <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m2.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="robo-text-subtitle m-1">
+            Camera Hull Design
+          </div>
+          <div class="robo-text-content">
+            The camera hull is made of acrylic. So similar simulations were performed on the camera hull in ANSYS as done in the main hull to ensure structural 
+            integrity.
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="robo-text-subtitle m-1">
+            Dropper and Grabber
+          </div>
+          <div class="robo-text-content">
+            A very simple mechanism has been employed to drop the required objects from the vehicle. In our mechanism, a BO motor is mounted to a PVC pipe. When the motor rotates, the obstruction causing the object to stay is removed, and hence the object falls. Newton Subsea Gripper, developed by BlueRobotics, is 
+            used.
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="robo-text-subtitle m-1">
+            Torpedo Design
+          </div>
+          <div class="robo-text-content">
+            The torpedoes are in the shape of a hollow cylinder of 10mm diameter and are 3D printed for high accuracy. A pressure-based system is used to launch the torpedoes by a tank with pre-filled pressure of 30Pa. The torpedo is connected to the tank through PU fitting pipe passing through a coil actuating solenoid, which on receiving the command opens for about 10 milliseconds, thus allowing the air to pass from the tank to the torpedo through the PU fitting 
+            pipe.
+          </div>
+        </div>
+        <div class="col-lg-6 col-sm-12 p-2">
+          <div class="col-lg-12col-sm-12 p-2">
+            <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m3.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
+          </div>
+        </div>
+      </div>
 
 
-        <div>
-            <h3>Basic vehicle frame design and material selection criteria :</h3> 
-            
-            <p>The frame is designed to be compact and modular to reduce drag force down to a minimum and provide efficient hydrodynamics. The frame design borrows some inspiration from Tesla's Cybertruck model. Aluminium is used as the material of the frame due to its lightweight and easy machining ability. The frame is trapezoidal (from the side view). The design of the frame is such that each elementary structure (hollow box and aluminium rods) can be separated from each other. It allows us a never before level of flexibility in adjusting dimensions depending upon the requirements.</p>
-            <div class="text-center">
-              <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m1.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
-            </div>
-        
-            <h3>Hull Design:</h3> 
-            
-            <p> The hull design is aimed to provide high strength and rigidity while keeping the weight to a minimum, so we went for an S Glass box-shaped enclosure. 
-              The hull is divided into two layers – one for electronics and circuitry and the other for battery enclosure. The material of the hull is chosen in such a way that it does not crack at a depth of about 10m. This is thoroughly tested by simulation in ANSYS Static Structural by applying hydrostatic pressure equivalent to a depth of 10m underwater.
-            </p>Both its ends can be easily opened to access the electronics inside. The design also provides watertight sealing to the bot. In case of an accidental failure, the electronic components are placed on a perforated and tapered base plate. This ensures the safety of the circuit in case of leakage as the water first collects at the bottom of the base plate.
-            </p>
-            <div class="text-center">
-              <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m2.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
-            </div>
- 
-            <h3>Camera Hull Design :</h3>          
-            <p>The camera hull is made of acrylic. So similar simulations were performed on the camera hull in ANSYS as done in the main hull to ensure structural integrity.
-            </p>
+      <div class="robo-text-title d-flex flex-row text-wrap m-1">
+        Cooling System 
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 p-2">
+          <!-- <div class="robo-text-subtitle m-1">
+            TODO: Sub points if any
+          </div> -->
+          <div class="robo-text-content">
+            The thermal system consists of a quasi active cooling system. 
+            It helps us provide better cooling without having a heavy toll on our batteries. The primary method of heat transfer is conduction. There are other minor sources of heat, which are cooled by convection due to the circulating air.
+            The cooling system primarily consists of heat pipes paired with internal cooling mechanisms present in some of the components. The heat pipes help in easy and continuous flow of heat out from the hull via the heat sinks present in the ICs and Jetson.
+            Jetson has an inbuilt cooling fan which benefits a lot from this cooling system by providing it with a viable heat sink in the otherwise closed environment. 
+            In the earlier models, we did not emphasise a dedicated cooling system as heat released by electronic components of our previous renditions was manageable. In our new vehicle, we have used better and more powerful ICs and a Jetson, which are primary heat sources. Each is connected to heat sinks and further connected to heat pipes. Furthermore, the heat pipes are in contact with the water outside directly for further heat transfer. There is a cooling fan within Jetson that helps us circulate the air in the hull, which is in contact with heat sinks, and heat pipes help in faster cooling and allow circulation of cool 
+            air.
+          </div>
+        </div>
+      </div>
+      
+      <div class="robo-text-title d-flex flex-row text-wrap m-1">
+        Experiment Results  
+      </div>
+      <div class="row">
+        <div class="col-lg-12 col-sm-12 p-2">
+          <!-- <div class="robo-text-subtitle m-1">
+            TODO: Software Name if any
+          </div> -->
+          <div class="robo-text-content">
+            Analysis of the battery hull and main hull using ANSYS Static structural was done considering pressures at a depth of 10m for all possible materials taken into consideration initially.Then appropriate materials were chosen thereby giving results of factor of safety of given structures well above 3( S-Glass was chosen for main hull and battery hull) . Thermal analysis of heat pipes used in the  cooling mechanism was done using ANSYS - Steady state Thermal. The cooling system proved efficient to dissipate the heat generated by the electronic 
+            components.
+          </div>
+        </div>
+      </div>
+      
+      <div class="row align-items-center">
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+        <p class="im-caption">Equivalent stress analysis of Battery hull</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+            <p class="im-caption" >Factor of safety results for battery hull</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m6.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+        <p class="im-caption">Factor of safety results for analysis of Main Hull</p>
+        </div>
 
-            <h3>Object Dropper and Grabber :</h3> 
-            <p>A very simple mechanism has been employed to drop the required objects from the vehicle. In our mechanism, a BO motor is mounted to a PVC pipe. When the motor rotates, the obstruction causing the object to stay is removed, and hence the object falls. Newton Subsea Gripper, developed by BlueRobotics, is used.
-            </p>
-            
-            <h3>Torpedo :</h3> 
-            <p>The torpedoes are in the shape of a hollow cylinder of 10mm diameter and are 3D printed for high accuracy. A pressure-based system is used to launch the torpedoes by a tank with pre-filled pressure of 30Pa. The torpedo is connected to the tank through PU fitting pipe passing through a coil actuating solenoid, which on receiving the command opens for about 10 milliseconds, thus allowing the air to pass from the tank to the torpedo through the PU fitting pipe.
-            </p>
-            <div class="text-center">
-              <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m3.jpeg?raw=true" class="img-fluid img-shadow" alt="...">
-            </div>
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m7.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+          <p class="im-caption">Equivalent Stress results for analysis of Main Hull</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m8.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+          <p class="im-caption">Temperature Gradient results for Heat pipe cooling ICs</p>
+        </div>
+        <div class="col-lg-4 col-sm-12 p-2 align-content-start">
+          <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m9.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
+          <p class="im-caption">Temperature gradient results for heat pipe cooling JETSON</p>
+        </div>
+      </div>
 
-             <h3>Cooling System :</h3>           
-            <p>The thermal system consists of a quasi active cooling system. 
-              It helps us provide better cooling without having a heavy toll on our batteries. The primary method of heat transfer is conduction. There are other minor sources of heat, which are cooled by convection due to the circulating air.
-            </p>
-            <p>The cooling system primarily consists of heat pipes paired with internal cooling mechanisms present in some of the components. The heat pipes help in easy and continuous flow of heat out from the hull via the heat sinks present in the ICs and Jetson.
-            </p>
-            <p>Jetson has an inbuilt cooling fan which benefits a lot from this cooling system by providing it with a viable heat sink in the otherwise closed environment. 
-            </p>
-            <p>In the earlier models, we did not emphasise a dedicated cooling system as heat released by electronic components of our previous renditions was manageable. In our new vehicle, we have used better and more powerful ICs and a Jetson, which are primary heat sources. Each is connected to heat sinks and further connected to heat pipes. Furthermore, the heat pipes are in contact with the water outside directly for further heat transfer. There is a cooling fan within Jetson that helps us circulate the air in the hull, which is in contact with heat sinks, and heat pipes help in faster cooling and allow circulation of cool air.
 
-            </p>
-             
-            <h3>EXPERIMENTAL RESULTS :</h3> 
-            <p>Analysis of the battery hull and main hull using ANSYS Static structural was done considering pressures at a depth of 10m for all possible materials taken into consideration initially.Then appropriate materials were chosen thereby giving results of factor of safety of given structures well above 3( S-Glass was chosen for main hull and battery hull) . Thermal analysis of heat pipes used in the  cooling mechanism was done using ANSYS - Steady state Thermal. The cooling system proved efficient to dissipate the heat generated by the electronic components.
-            </p>
-            <div class="row align-items-center">
-              <div class="col">
-                <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m4.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-              <p>Equivalent stress analysis of Battery hull</p>
-              </div>
-              <div class="col">
-                <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m5.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-                  <p>Factor of safety results for battery hull</p>
-              </div>
-              <div class="col">
-                <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m6.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-
-              <p>Factor of safety results for analysis of Main Hull</p>
-              </div>
-            </div>
-    <div class="row align-items-center">
-    <div class="col">
-      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m7.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-    <p>Equivalent Stress results for analysis of Main Hull</p>
-    </div>
-    <div class="col">
-      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m8.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-     <p>Temperature Gradient results for Heat pipe cooling ICs</p>
-    </div>
-    <div class="col">
-      <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/mech/m9.jpeg?raw=true" alt="Image" class="img-fluid img-shadow">
-     <p>Temperature gradient results for heat pipe cooling JETSON</p>
-    </div>
-    </div>
-             <h3>REFERENCES :</h3> 
-            
-            <ol>
+      <div class="end-page">
+        <h3><span class="badge badge-secondary">References</span></h3>
+        <div class="resources">
+          <ul>
             <li><a href="https://www.intechopen.com/books/electronics-cooling/heat-pipes-for-computer-cooling-applications">heat-pipes-for-computer-cooling-applications</a></li>
             <li><a href="https://celsiainc.com/heat-sink-blog/heat-pipe-thermal-conductivity">heat-pipe-thermal-conductivity</a></li>
             <li><a href="https://www.boydcorp.com/resources/temperature-control/frequently-asked-thermal-questions.html">frequently-asked-thermal-questions</a></li>
-            </ol>
-
-
-
+          </ul>
         </div>
+
+      </div>
+
     </section>
  
 

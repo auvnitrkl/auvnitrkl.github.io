@@ -86,3 +86,8 @@
     justify-content: center;
     margin: auto;
 }
+
+.limit-text{
+    max-height: 40vh;
+    overflow-y: scroll;    
+}

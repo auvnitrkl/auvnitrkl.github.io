@@ -162,42 +162,78 @@
         </div>
 
         <div class="robo-text-title d-flex flex-row text-wrap m-1">
-          Object Detection
+          Perception Stack 
         </div>
         <div class="row">
           <div class="col-lg-6 col-sm-12 p-2">
             <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
-              OPENCV
+              Object Detection
             </div>
             <div class="robo-text-content d-flex flex-row text-wrap">
-              We as a team have been using OpenCV to perform image processing techniques to extract information from camera frames and detect obstacles & tasks at hand in many of our previous competitions. We used bounding box vertices to locate tasks such as gates & bins. These detections also helped in localizing our bot as by applying basic math similarity concept we were able to estimate the position of our bot with respect to task (having the focal length of the camera at hand and the original length and width of task objects and it comparing with the ratio of pixel lengths of edges). The center we calculated from the contours/hough lines made around the task(gates) helped in aligning the bot and pass through the gate.
-              Neural Network
+              Apart from the preprocessing and postprocessing of the image stream that is done by
+              OpenCV(an open-source computer vision) library,
+              we are using Yolo(You Only Look Once, a Convolutional Neural Network(CNN) based on DarkNet architecture) for object detection. This allows
+              us to accurately identify the objects with complex
+              textures or shapes from a greater distance. Yolo is
+              trained on a large dataset of images and videos collected from test runs and past competitions. In addition, we have applied various image augmentations
+              to impart variations and increase the dataset size.
             </div>
-            <div class="robo-text-subtitle">
-              DEEP LEARNING MODEL
-            </div>
-            <div class="robo-text-content">
+            <!-- <div class="robo-text-subtitle">
+              
+            </div> -->
+            <!-- <div class="robo-text-content">
               <b>YOLO V5/V3</b> Although traditional image processing methods were successful in detecting objects underwater(with suitable adjustment in HSV values as per lighting) but it comes with certain drawbacks such as failing to detect from a greater distance and unreliable results in different lighting and background. Here we have found Yolov3(You Only Look Once) CNN ( a real-time object detection algorithm that identifies specific objects in videos, live feeds, or images.)to be effective. We realized if we can navigate to the object close enough using this neural network-based model, then we can apply suitable thresholding techniques or can use the same model to get the center and pass through the target(gate) or reach the task at hand. For training the CNN, images were collected from previous competitions. Data augmentation was also performed to introduce variation and increase the dataset. We used our own Labeler Toolbox to label the images. 1/5th of the images were reserved as the test set to run the inference and the model(based on open-source neural network framework Darknet) was trained on the rest of the data. Unfortunately, we could not test the model real-time underwater on Nvidia Jetson due to the pandemic, but we still achieved very encouraging results testing it on our local systems(25 fps 87%).
               Together with new machine learning approaches, traditional image processing techniques, color correction algorithms, and other fine-tuned approaches, we hope to strengthen the perception system of 
               Makara 4.0
-            </div>
+            </div> -->
             
           </div>
           <div class="col-lg-6 col-sm-12 p-2">
-            <div class="col-lg-12col-sm-12 p-2">
+            
+            <div class="col-lg-11 col-sm-12 d-flex flex-row justify-content-center p-4 m-auto">
+              <div id="demo0" class="carousel slide" data-ride="carousel">
+  
+                <!-- Indicators -->
+                <ul class="carousel-indicators">
+                  <li data-target="#demo0" data-slide-to="0" class="active"></li>
+                  <li data-target="#demo0" data-slide-to="1"></li>
+                </ul>
+              
+                <!-- The slideshow -->
+                <div class="carousel-inner">
+                  <div class="carousel-item active" >
+                    <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s1.png?raw=true" width="100%" height="auto"  alt="Los Angeles">
+                    <div class="ss-cap ">Detecting multiple bins</div>
+                  </div>
+                  <div class="carousel-item ">
+                    <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s2.png?raw=true" width="100%" height="auto" alt="Chicago">
+                    <div class="ss-cap ">Detecting gate</div>
+                  </div>
+                </div>
+              
+                <!-- Left and right controls -->
+                <a class="carousel-control-prev" href="#demo0" data-slide="prev">
+                  <span class="carousel-control-prev-icon"></span>
+                </a>
+                <a class="carousel-control-next" href="#demo0" data-slide="next">
+                  <span class="carousel-control-next-icon"></span>
+                </a>
+              
+              </div>
+            </div>
+<!--             
+            <div class="col-lg-12 col-sm-12 p-2">
               <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s1.png?raw=true" alt="Image" class="img-fluid img-shadow">
             </div>
             <div class="col-lg-12 col-sm-12 p-2">
               <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s2.png?raw=true" alt="Image" class="img-fluid img-shadow">
             </div>
-            <!-- <div class="col-lg-12 col-sm-12 p-2">
-              <img src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s3.png?raw=true" alt="Image" class="img-fluid img-shadow">
-            </div> -->
+           -->
           </div>
         </div>
 
         <div class="robo-text-title d-flex flex-row text-wrap m-1">
-          Perception Improving Techniques
+          Preprocessing Techniques
         </div>
 
         <div class="row">
@@ -224,9 +260,11 @@
               <div class="carousel-inner">
                 <div class="carousel-item active" >
                   <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s4.jpeg?raw=true" width="100%" height="auto"  alt="Los Angeles">
+                  <div class="ss-cap">Original Image</div>
                 </div>
                 <div class="carousel-item ">
                   <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s5.jpeg?raw=true" width="100%" height="auto" alt="Chicago">
+                  <div class="ss-cap">Processed Image</div>
                 </div>
               </div>
             
@@ -240,6 +278,7 @@
             
             </div>
           </div>
+
         </div>
 
 
@@ -268,12 +307,15 @@
               <div class="carousel-inner">
                 <div class="carousel-item active" >
                   <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s6.jpeg?raw=true" width="100%" height="auto"  alt="Los Angeles">
+                  <div class="ss-cap">Original Image</div>
                 </div>
                 <div class="carousel-item ">
                   <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s7.jpeg?raw=true" width="100%" height="auto" alt="Chicago">
+                  <div class="ss-cap">Stretched Image</div>
                 </div>
                 <div class="carousel-item ">
                   <img class="img-fluid img-shadow" src="https://github.com/auvnitrkl/webAssets/blob/main/images/tdr/soft/s8.jpeg?raw=true" width="100%" height="auto" alt="Chicago">
+                  <div class="ss-cap">Stretched + CLAHE Image</div>
                 </div>
               </div>
             
@@ -314,12 +356,12 @@
         </div>
 
         <div class="robo-text-title d-flex flex-row text-wrap m-1">
-          Auto-tunning PID
+          Navigation Stack
         </div>
         <div class="row">
           <div class="col-lg-6 col-sm-12 p-2">
             <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
-              Ant Colony Optimization
+              Auto-tuning PID
             </div>
             <div class="robo-text-content d-flex flex-row text-wrap">
               The PID controllers used in our AUV have to tune it (that means to obtain the value of Kp, Ki, Kd constants ) manually so that it manoeuvres properly.
@@ -336,17 +378,20 @@
         </div>
         
 
-        <div class="robo-text-title d-flex flex-row text-wrap m-1">
-          Working with DVL and why?
+        <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
+          Underwater Localization
         </div>
         <div class="row">
           <div class="col-lg-6 col-sm-12 p-2">
-            <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
+            <!-- <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
               Doppler Velocity Log
-            </div>
+            </div> -->
             <div class="robo-text-content ">
-              A Doppler Velocity Log (DVL) is an acoustic sensor that estimates velocity relative to the sea bottom. This is achieved by sending a long pulse along with a minimum of three acoustic beams, each pointing in a different direction. Typically, this produces estimates of velocity converted into an XYZ coordinate frame of reference – the DVL’s frame of reference. Together with a heading estimate, these velocity estimates may be integrated over the ping interval to estimate a step-by-step change of position – i.e. displacement = velocity × time 
-              step.   
+              Underwater localization has always been a
+              challenge for AUVs because of the incapability of
+              inertial sensors to calculate linear velocity accurately due to high noise at the accelerometer. In
+              order to tackle this challenge, the team will be using Doppler Velocity Log (DVL), which can provide updated velocities using various acoustic 
+              measurements
             </div>  
           </div>
           <div class="col-lg-5 col-sm-12 d-flex flex-row justify-content-center p-4 m-auto">
@@ -355,12 +400,14 @@
         </div>
         <div class="row">
           <div class="col-lg-6 col-sm-12 p-2">
-            <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
+            <!-- <div class="robo-text-subtitle d-flex flex-row text-wrap m-1">
               Doppler Velocity Log
-            </div>
+            </div> -->
             <div class="robo-text-content ">
-              It is important to ensure that velocity estimates do not have any bias or offsets because this will lead to a growing error in the position estimate. This is where the Doppler Velocity Log becomes a key in the subsea navigation for its accurate estimate of velocity with zero-mean bias. This sensor combined with the IMU ensures a proper estimation of obstacles/key places that the vehicle needs to avoid/reach to perform some specific 
-              work.   
+              Sensor data from several sensors such as
+              DVL, Inertial measurement unit(IMU), point cloud
+              from stereo vision, even measurements from electronics components are sensor fused to achieve accurate localization 
+              results.   
             </div>  
           </div>
           <div class="col-lg-5 col-sm-12 d-flex flex-row justify-content-center p-4 m-auto">
@@ -379,7 +426,7 @@
       <div class="row">
         <div class="col-lg-6 col-sm-12 p-2">
           <div class="robo-text-subtitle m-1">
-            How the whole circuit works?
+            Improvements in Circuit
           </div>
           <div class="robo-text-content limit-text">
             Though the previous version of our electronics stack met all the requirements perfectly, but, it also has its issues that we have addressed in this year’s rebuild. 
@@ -447,7 +494,7 @@
         Acoustic Board
       </div>
       <div class="robo-text-content">
-        In our previous bot, we tried making passive sonar for locating the pinger with hydrophone and RaspberryPi with external ADC but that did not turn out to be working. So This time we planned the whole Acoustic signal processing part based on FPGA. We designed our own Analog frontend board which Has Adjustable Bandpass filters, Amplifiers with Adaptive gain control, and High-speed ADCs which connect to the Zybo Z7 FPGA board. We find out the pinger heading by finding the Time Delay of Arrival of signals. FPGA can communicate to onboard Computer via Ethernet or CAN bus
+        In our previous bot, we tried making passive sonar for locating the pinger with hydrophone and RaspberryPi with external ADC but that did not turn out to be working. So This time we planned the whole Acoustic signal processing part based on FPGA. We designed our own Analog frontend board which Has Adjustable Bandpass filters, Amplifiers with Adaptive gain control, and High-speed ADCs which connect to the Eclypse Z7 FPGA board. We find out the pinger heading by finding the Time Delay of Arrival of signals. FPGA can communicate to onboard Computer via Ethernet or CAN bus
         There is an onboard AVR microcontroller ATMEGA328p that controls the Frontend gain and filtering also controls various power rails within the board. This board has its own local power distribution to meet the special requirements of the board. The microcontroller also interfaces with the debugging board via CAN and can regulate high-performance and power-saving modes. And power down partially or fully in case of fault when signaled from debugging board.
       </div>
 

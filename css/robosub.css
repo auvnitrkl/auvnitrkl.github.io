@@ -106,3 +106,13 @@
     border-top: 2px solid rgba(0, 0, 0, 0.432);
     padding-top: 10px;
 }
+
+.ss-cap{
+    background-color: white ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    font-style: italic;
+    color: black;
+}

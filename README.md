@@ -1,2 +1,1 @@
-# auvnitrkl.github.io
-Website for Team Tiburon
+[Website for Team Tiburon](auvnitrkl.github.io)
